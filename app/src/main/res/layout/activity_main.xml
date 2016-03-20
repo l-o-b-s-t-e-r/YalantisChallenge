@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/relative"
+    tools:context="first.task.yalantis.yalantischallenge.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/header"
+        android:textSize="@dimen/textSize"
+        android:id="@+id/textHeader"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/textStatus"
+        android:textColor="@android:color/darker_gray"
+        android:onClick="onEveryClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        android:id="@+id/textStatus"
+        android:textSize="@dimen/smallTextSize"
+        android:background="@drawable/rectangle_rounded"
+        android:layout_alignTop="@+id/textHeader"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/textHeader"
+        android:layout_alignLeft="@+id/textCreatedDate"
+        android:layout_alignRight="@+id/textCreatedDate"
+        android:onClick="onEveryClick" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_weight="0.5"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/textHeader"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/viewUnderHeader"
+        android:layout_marginTop="@dimen/margin"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/created"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textCreated"
+        android:layout_below="@+id/viewUnderHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/darker_gray"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/createdDate"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textCreatedDate"
+        android:layout_alignTop="@+id/textCreated"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onEveryClick" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/textCreated"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/viewUnderCreated"
+        android:layout_marginTop="@dimen/margin"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registered"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textRegistered"
+        android:layout_below="@+id/viewUnderCreated"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/bigMargin"
+        android:textColor="@android:color/darker_gray"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registeredDate"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textRegisteredDate"
+        android:layout_alignTop="@+id/textRegistered"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onEveryClick" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/textRegistered"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/viewUnderRegistered"
+        android:layout_marginTop="@dimen/margin"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resolve"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textResolveUpTo"
+        android:layout_below="@+id/viewUnderRegistered"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/bigMargin"
+        android:textColor="@android:color/darker_gray"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resolveDate"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textEndDate"
+        android:layout_alignTop="@+id/textResolveUpTo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onEveryClick" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/textResolveUpTo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/viewUnderResolveUpTo"
+        android:layout_marginTop="@dimen/margin"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/company"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textCompany"
+        android:layout_below="@+id/viewUnderResolveUpTo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/bigMargin"
+        android:textColor="@android:color/darker_gray"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/companyName"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textCompanyName"
+        android:layout_alignTop="@+id/textCompany"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onEveryClick" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/textCompany"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/viewUnderCompany"
+        android:layout_marginTop="@dimen/margin"
+        android:onClick="onEveryClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="@dimen/smallTextSize"
+        android:id="@+id/textDescription"
+        android:layout_below="@+id/viewUnderCompany"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/bigMargin"
+        android:onClick="onEveryClick"
+        android:layout_alignRight="@+id/recyclerView"
+        android:layout_alignEnd="@+id/recyclerView" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/textDescription"
+        android:onClick="onEveryClick" />
+
+</RelativeLayout>
+</ScrollView>

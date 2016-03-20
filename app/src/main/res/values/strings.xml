@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">YalantisChallenge</string>
+    <string name="header">Yalantis First Challenge</string>
+    <string name="status">In progress</string>
+    <string name="created">Created</string>
+    <string name="createdDate">10 of March 2016 </string>
+    <string name="registered">Start</string>
+    <string name="registeredDate">11 of March 2016</string>
+    <string name="resolve">End</string>
+    <string name="resolveDate">25 of March 2016</string>
+    <string name="company">Company</string>
+    <string name="companyName">Yalantis</string>
+    <string name="description">Android internship tasks. You have to create screen with controls. It should be screen with ScrollView, textviews and horizontal recycler view with images.</string>
+</resources>
