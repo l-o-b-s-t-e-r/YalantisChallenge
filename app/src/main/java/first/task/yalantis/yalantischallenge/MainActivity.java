@@ -12,6 +12,29 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    //drawable-hdpi/rectangle_rounded.xml
+    //Change to dp             <corners android:radius="25.0dip" />
+
+    //>first.task.yalantis.yalantischallenge.MainActivity
+    //raw 15, 16 - convert to local (edited)
+    //raw 37 add check if actionbar is null
+
+    //>first.task.yalantis.yalantischallenge.CustomCard
+    // shouldn't use custom card to show 2 ImageViews on screen
+
+    //also remove first.task.yalantis.yalantischallenge.ApplicationTest and first.task.yalantis.yalantischallenge.ExampleUnitTest as they are redundant
+
+    //>layout/activity_main.xml
+    //styles aren't used - a lot of similar views with same code is bad practice.
+
+    //first.task.yalantis.yalantischallenge.RVAdapter
+    // private fields should be named according to Google Code Style docs
+
+    //app/src/main/AndroidManifest.xml
+    //raw 9 support for RTL layouts is on, but not using layout_marginStart and layout_marginEnd in layout/card_captioned_image.xml. Better turn RTL support off (edited)
+
+    //General UI mistake is that your project's color scheme doesn't match example's one
+
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
 
