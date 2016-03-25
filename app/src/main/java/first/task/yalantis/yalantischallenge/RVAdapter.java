@@ -1,9 +1,9 @@
 package first.task.yalantis.yalantischallenge;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -11,44 +11,42 @@ import com.squareup.picasso.Picasso;
 
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
 
-    private Context context;
-    private CustomCard[] customCards;
+    private Context mContext;
+    private CustomImageView[] mCustomImageView;
 
-    public RVAdapter(CustomCard[] customCards, Context context){
-        this.customCards = customCards;
-        this.context = context;
+    public RVAdapter(CustomImageView[] customImageViews, Context context){
+        this.mCustomImageView = customImageViews;
+        this.mContext = context;
     }
 
     @Override
     public int getItemCount() {
-        return customCards.length;
+        return mCustomImageView.length;
     }
 
     @Override
     public PersonViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        CardView cardView = (CardView) LayoutInflater.from(parent.getContext())
+        View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_captioned_image, parent, false);
 
-        return new PersonViewHolder(cardView);
+        return new PersonViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(PersonViewHolder holder, int position){
-        CardView cardView = holder.cardView;
-        ImageView imageView = (ImageView)cardView.findViewById(R.id.info_image1);
-        Picasso.with(context).load(customCards[position].getFirstImageId()).into(imageView);
-
-        imageView = (ImageView)cardView.findViewById(R.id.info_image2);
-        Picasso.with(context).load(customCards[position].getSecondImageId()).into(imageView);
+        Picasso.with(mContext).load(mCustomImageView[position].getFirstImageId()).into(holder.mFirstImage);
+        Picasso.with(mContext).load(mCustomImageView[position].getSecondImageId()).into(holder.mSecondImage);
     }
 
     public class PersonViewHolder extends RecyclerView.ViewHolder {
 
-        private CardView cardView;
+        private ImageView mFirstImage;
+        private ImageView mSecondImage;
 
-        PersonViewHolder(CardView cardView) {
-            super(cardView);
-            this.cardView = cardView;
+        PersonViewHolder(View view) {
+            super(view);
+            this.mFirstImage = (ImageView)view.findViewById(R.id.info_image1);
+            this.mSecondImage = (ImageView)view.findViewById(R.id.info_image2);
         }
     }
 }

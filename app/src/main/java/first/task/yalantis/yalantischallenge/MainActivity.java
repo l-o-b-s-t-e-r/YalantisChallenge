@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -12,29 +13,28 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
-        layoutManager = new LinearLayoutManager(this, LinearLayout.HORIZONTAL, false);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayout.HORIZONTAL, false);
 
         recyclerView.setLayoutManager(layoutManager);
 
-        CustomCard customCards[] = new CustomCard[] {
-                new CustomCard(R.drawable.droid1,R.drawable.droid2),
-                new CustomCard(R.drawable.droid3,R.drawable.droid4)
+        CustomImageView customImageViews[] = new CustomImageView[] {
+                new CustomImageView(R.drawable.droid1,R.drawable.droid2),
+                new CustomImageView(R.drawable.droid3,R.drawable.droid4)
         };
 
-        RVAdapter adapter = new RVAdapter(customCards, this);
+        RVAdapter adapter = new RVAdapter(customImageViews, this);
         recyclerView.setAdapter(adapter);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        if (actionBar!=null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        };
     }
 
 
