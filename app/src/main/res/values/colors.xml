@@ -9,7 +9,6 @@
 
     <color name="background">#ececec</color>
     <color name="actionBar">#557daa</color>
-    <color name="black">#ffffff</color>
 
     <color name="titleColor">#848484</color>
 </resources>
